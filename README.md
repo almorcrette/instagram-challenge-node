@@ -1,6 +1,16 @@
-# Acebook
+# Insta-like
 
-This is a Node.js template for the Acebook engineering project.
+In this project, I use a Node.js seed to build out Instagram-like web-app features. This is the Makers Academy week 8 weekend challenge. _Alexis Morcrette_
+
+## The challenge
+
+Build Instagram: Simple huh!
+
+The challenge is to build Instagram using Node.js. I'll need users who can post pictures, write comments on pictures and like a picture. Style it like Instagram's website (or more awesome).
+
+Bonus if I can add filters!
+
+## Tech stack
 
 It uses:
 
@@ -60,6 +70,8 @@ REPLACE THIS TEXT WITH A LINK TO YOUR CARD WALL
    ```
 2. Browse to [http://localhost:3000](http://localhost:3000)
 
+### Test
+
 #### Start test server
 
 The server must be running locally with test configuration for the
@@ -72,7 +84,7 @@ npm run start:test
 This starts the server on port `3030` and uses the `acebook_test` MongoDB database,
 so that integration tests do not interact with the development server.
 
-### Test
+#### Running tests
 
 - Run all tests
   ```
