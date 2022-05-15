@@ -1,7 +1,10 @@
+// Sets up connection to test database
+
 var mongoose = require("mongoose");
 
+// Connects to test database and creates a connection instance
 beforeAll(function (done) {
-  mongoose.connect("mongodb://0.0.0.0/acebook_test", {
+  mongoose.connect("mongodb://0.0.0.0/throughYourEyes_test", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
@@ -13,6 +16,7 @@ beforeAll(function (done) {
   });
 });
 
+// Closes connection to test database
 afterAll(function (done) {
   mongoose.connection.close(true, function () {
     done();

@@ -1,6 +1,6 @@
 const HomeController = {
   Index: (req, res) => {
-    res.render("home/index", { title: "See Through Your Eyes" });
+    res.render("home/index", { title: "Through Your Eyes" });
   },
 };
 
