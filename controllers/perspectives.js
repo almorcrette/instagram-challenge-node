@@ -1,5 +1,15 @@
 const path = require("path");
 const fs = require('fs');
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads')
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+});
+const upload = multer({ storage: storage });
 
 
 const Perspective = require("../models/perspectives");
@@ -21,6 +31,7 @@ const PerspectivesController = {
   },
 
   Create: (req, res, next) => {
+    upload.single('perspective');
 
     var obj = {
       name: req.body.name,
