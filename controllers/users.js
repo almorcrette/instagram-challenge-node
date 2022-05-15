@@ -1,4 +1,5 @@
 // Import User model
+const { required } = require("nodemon/lib/config");
 const User = require("../models/user");
 
 // Sets up UsersController.
@@ -8,18 +9,27 @@ const UsersController = {
 
   // Sets up function to be used in /users/new GET route
   New: (req, res) => {
-    res.render("users/new", {});
+    res.render("users/new", { message: req.flash("message") });
   },
 
   // Sets up function to be used in /users POST route
   Create: (req, res) => {
     const user = new User(req.body);
-    user.save((err) => {
-      if (err) {
-         err;
-      }
-      res.status(201).redirect("/posts");
-    });
+    if (
+      user.username === '' ||
+      user.email === '' ||
+      user.password === ''
+      ) {
+        req.flash("message", "Username, email and password all required. Try again");
+        res.redirect("/users/new");
+    } else {
+      user.save((err) => {
+        if (err) {
+           err;
+        }
+        res.status(201).redirect("/posts");
+      });
+    }
   },
 };
 

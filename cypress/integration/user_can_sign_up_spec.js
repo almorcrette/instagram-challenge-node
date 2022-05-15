@@ -18,6 +18,8 @@ describe("Registration", () => {
       cy.get("#submit").click();
 
       cy.url().should("include", "/users/new");
+      cy.get("#missing-information").should("contain", "Username, email and password all required. Try again");
+
     });
 
     it("fails to register without an email", () => {
@@ -27,6 +29,8 @@ describe("Registration", () => {
       cy.get("#submit").click();
 
       cy.url().should("include", "/users/new");
+      cy.get("#missing-information").should("contain", "Username, email and password all required. Try again");
+
 
     });
 
@@ -37,6 +41,8 @@ describe("Registration", () => {
       cy.get("#submit").click();
 
       cy.url().should("include", "/users/new");
+      cy.get("#missing-information").should("contain", "Username, email and password all required. Try again");
+
 
     });
   })
