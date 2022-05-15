@@ -16,7 +16,7 @@ const UsersController = {
     const user = new User(req.body);
     user.save((err) => {
       if (err) {
-        throw err;
+         err;
       }
       res.status(201).redirect("/posts");
     });
