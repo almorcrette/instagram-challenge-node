@@ -10,10 +10,6 @@ const PerspectiveSchema = new mongoose.Schema({
   }
 });
 
-// imgSrcBuilder: function() {
-//   return 'data:image/' + this.img.contentType + ';base64,' + this.img.data.toString('base64')
-// }
-
 const Perspective = mongoose.model("Perspective", PerspectiveSchema);
 
 module.exports = Perspective;
