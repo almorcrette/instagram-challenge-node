@@ -10,6 +10,23 @@ The challenge is to build Instagram using Node.js. I'll need users who can post 
 
 Bonus if I can add filters!
 
+## Progress to date
+
+As of Monday 16 May 2022:
+- [x] As a user, so that my pictures and comments are ascribed to me, I want to set up a username for the app
+- [x] As an app administrator, so that I can keep track of who the users are, I want to require a username, email and password on sign up.
+- [ ] As a user, so that others can see the world through my eyes, I want to share my perspectives by posting pictures.
+- [ ] Write comments on pictures
+- [ ] Like pictures
+- [ ] Styling
+- [ ] Filters
+
+_Note on posting pictures_: This features does not currently work, still in the process of debugging. See commit messages for log of progress. 
+
+### Note on language
+
+In the code base, images / pictures are referred to as 'perspectives'.
+
 ## Tech stack
 
 It uses:
